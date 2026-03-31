@@ -1,24 +1,24 @@
-#include <iostream> // [cite: 33]
+#include <iostream>
 
-using std::cin;     // [cite: 37]
-using std::cout;    // [cite: 38]
-using std::endl;    // [cite: 39]
+using std::cin;
+using std::cout;
+using std::endl;
 
-int main()          // [cite: 41]
+int main()
 {
-    int liczba{};   // Zmienna na liczbe calkowita [cite: 74, 75]
+    int liczba{};   // Zmienna na liczbe calkowita
     
     cout << "Podaj liczbe calkowita: ";
-    cin >> liczba;  // Wczytanie wartosci przez cin [cite: 76]
+    cin >> liczba;  // Wczytanie wartosci przez cin
     
     // Sprawdzanie warunkow 
     if (liczba > 0) {
-        cout << "Liczba jest dodatnia." << endl; // [cite: 70]
+        cout << "Liczba jest dodatnia." << endl;
     } else if (liczba < 0) {
-        cout << "Liczba jest ujemna." << endl;   // [cite: 71]
+        cout << "Liczba jest ujemna." << endl;
     } else {
-        cout << "Liczba jest rowna zero." << endl; // [cite: 72]
+        cout << "Liczba jest rowna zero." << endl;
     }
     
-    return 0;       // [cite: 44]
+    return 0;
 }

@@ -1,19 +1,19 @@
-#include <iostream> // [cite: 33]
-#include <string>   // [cite: 34]
+#include <iostream>
+#include <string>
 
-using std::cin;     // [cite: 37]
-using std::cout;    // [cite: 38]
-using std::endl;    // [cite: 39]
-using std::string;  // [cite: 40]
+using std::cin;
+using std::cout;
+using std::endl;
+using std::string;
 
-int main()          // [cite: 41]
+int main()
 {
-    string imie{};  // Zmienna przechowujaca tekst, zainicjalizowana klamrami [cite: 62, 66]
+    string imie{};  // Zmienna przechowujaca tekst, zainicjalizowana klamrami
     
-    cout << "Podaj swoje imie: "; // Wypisywanie tekstu na ekran [cite: 52]
-    cin >> imie;                  // Wczytywanie imienia wpisanego z klawiatury [cite: 61]
+    cout << "Podaj swoje imie: "; // Wypisywanie tekstu na ekran
+    cin >> imie;                  // Wczytywanie imienia wpisanego z klawiatury
     
-    cout << "Witaj, " << imie << "!" << endl; // Wypisywanie powitania i przejscie do nowej linii [cite: 53, 59]
+    cout << "Witaj, " << imie << "!" << endl; // Wypisywanie powitania i przejscie do nowej linii
     
-    return 0;       // [cite: 44]
+    return 0;
 }

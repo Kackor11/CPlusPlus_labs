@@ -1,24 +1,24 @@
-#include <iostream> // [cite: 33]
+#include <iostream>
 
-using std::cin;     // [cite: 37]
-using std::cout;    // [cite: 38]
-using std::endl;    // [cite: 39]
+using std::cin;
+using std::cout;
+using std::endl;
 
-int main()          // [cite: 41]
+int main()
 {
-    int n{};        // Zmienna okreslajaca do jakiej liczby sumujemy [cite: 97]
-    int suma{};     // Zmienna przechowujaca wynik [cite: 97]
+    int n{};        // Zmienna okreslajaca do jakiej liczby sumujemy
+    int suma{};     // Zmienna przechowujaca wynik
     
     cout << "Podaj liczbe n: ";
-    cin >> n;       // Wczytywanie liczby n [cite: 91]
+    cin >> n;       // Wczytywanie liczby n
     
-    // Petla for do obliczen [cite: 100]
+    // Petla for do obliczen
     // i zaczyna od 1, petla dziala dopoki i jest mniejsze lub rowne n
     for (int i = 1; i <= n; i++) {
-        suma = suma + i; // W kazdej iteracji dodajemy kolejna liczbe [cite: 101]
+        suma = suma + i; // W kazdej iteracji dodajemy kolejna liczbe
     }
     
-    cout << "Suma liczb od 1 do " << n << " to: " << suma << endl; // Wypisywanie wyniku [cite: 94, 102]
+    cout << "Suma liczb od 1 do " << n << " to: " << suma << endl; // Wypisywanie wyniku
     
-    return 0;       // [cite: 44]
+    return 0;
 }
