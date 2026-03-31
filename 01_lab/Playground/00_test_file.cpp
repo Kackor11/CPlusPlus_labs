@@ -10,6 +10,6 @@ using std::string;
 int main()
 {
     // tutaj wpisz kod
-    std::cout << "Hello world!" << std::endl;
+    cout << "Hello world!" << endl;
     return 0;
 }
