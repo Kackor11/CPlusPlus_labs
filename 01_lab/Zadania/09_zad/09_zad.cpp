@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     string napis{};
 
-    cout << "Podaj dowolne slow: " << endl;
+    cout << "Podaj dowolne slowo: " << endl;
     cin >> napis;
 
     while (cin.fail())
