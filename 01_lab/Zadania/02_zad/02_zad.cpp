@@ -1,15 +1,13 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main() {
 
-    string name{};
+    std::string name{};
 
-    cout << "Podaj swoje imie: ";
-    cin >> name;
-    cout << "Witaj " << name << "!" << endl;
+    std::cout << "Podaj swoje imie: ";
+    std::cin >> name;
+    std::cout << "Witaj " << name << "!" << std::endl;
 
     return 0;
 }

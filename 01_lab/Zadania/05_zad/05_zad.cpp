@@ -1,29 +1,27 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main() {
     int n{};
     int suma{};
 
-    cout << "Podaj liczbe calkowita: ";
-    cin >> n;
+    std::cout << "Podaj liczbe calkowita: ";
+    std::cin >> n;
 
-    while (cin.fail()) {
-        if (cin.fail()) {
-            cin.clear();
-            cin.ignore(10000, '\n');
+    while (std::cin.fail()) {
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
         }
-        cout << "Wpisano niepoprawny input, sprobuj jeszcze raz" << endl;
+        std::cout << "Wpisano niepoprawny input, sprobuj jeszcze raz" << std::endl;
 
-        cout << "Podaj liczbe calkowita: ";
-        cin >> n;
+        std::cout << "Podaj liczbe calkowita: ";
+        std::cin >> n;
     }
 
     for (int i = 1; i <= n; i++) {
         suma = suma + i;
     }
-    cout << "Suma liczb od 1 do " << n << " = " << suma << endl;
+    std::cout << "Suma liczb od 1 do " << n << " = " << suma << std::endl;
     return 0;
 }

@@ -1,29 +1,27 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main() {
     int n{};
 
-    cout << "Podaj liczbe calkowita: ";
-    cin >> n;
+    std::cout << "Podaj liczbe calkowita: ";
+    std::cin >> n;
 
     if (n > 0) {
-        cout << "Liczba jest dodatnia" << endl;
+        std::cout << "Liczba jest dodatnia" << std::endl;
     } else if (n < 0)
     {
-        cout << "Liczba jest mniejsza od zera" << endl;
+        std::cout << "Liczba jest mniejsza od zera" << std::endl;
     } else {
-        cout << "Liczba jest rowna zeru" << endl;
+        std::cout << "Liczba jest rowna zeru" << std::endl;
     }
 
     if (n % 2 == 0)
     {
-        cout << "Liczba " << n << " jest parzysta";
+        std::cout << "Liczba " << n << " jest parzysta";
     } else
     {
-        cout << "Liczba " << n << " jest nieparzysta";
+        std::cout << "Liczba " << n << " jest nieparzysta";
     }
 
     return 0;

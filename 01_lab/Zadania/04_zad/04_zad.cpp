@@ -1,54 +1,52 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main() {
 
     int liczba{};
 
-    cout << "Podaj liczbe (1-7): ";
-    cin >> liczba;
+    std::cout << "Podaj liczbe (1-7): ";
+    std::cin >> liczba;
 
-    while (liczba < 1 || liczba > 7 || cin.fail())
+    while (liczba < 1 || liczba > 7 || std::cin.fail())
     {
-        if (cin.fail()) 
+        if (std::cin.fail()) 
         {
-            cin.clear();
-            cin.ignore(10000, '\n');
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
         }
 
-        cout << "Podano nieprawidlowy wybor" << endl;
-        cout << "Sprobuj jeszcze raz, wybiercz liczbe (1-7): ";
+        std::cout << "Podano nieprawidlowy wybor" << std::endl;
+        std::cout << "Sprobuj jeszcze raz, wybiercz liczbe (1-7): ";
 
-        cin >> liczba;
+        std::cin >> liczba;
     }
     
     switch (liczba)
     {
     case 1:
-        cout << "PONIEDZIALEK";
+        std::cout << "PONIEDZIALEK";
         break;
     case 2:
-        cout << "WTOREK";
+        std::cout << "WTOREK";
         break;
     case 3:
-        cout << "SRODA";
+        std::cout << "SRODA";
         break;
     case 4:
-        cout << "CZWARTEK";
+        std::cout << "CZWARTEK";
         break;
     case 5:
-        cout << "PIATEK";
+        std::cout << "PIATEK";
         break;
     case 6:
-        cout << "SOBOTA";
+        std::cout << "SOBOTA";
         break;
     case 7:
-        cout << "NIEDZIELA";
+        std::cout << "NIEDZIELA";
         break;
     default:
-        cout << "Wybrano nieprawidlowa opcje";
+        std::cout << "Wybrano nieprawidlowa opcje";
         break;
     }
 

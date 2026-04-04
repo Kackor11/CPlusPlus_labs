@@ -1,31 +1,29 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main() {
 
     int liczba_prob{1};
-    string haslo{"cpp123"};
-    string passw_input{};
+    std::string haslo{"cpp123"};
+    std::string passw_input{};
 
-    cout << "Witaj uzytkowniku!, podaj haslo: ";
-    cin >> passw_input;
+    std::cout << "Witaj uzytkowniku!, podaj haslo: ";
+    std::cin >> passw_input;
 
-    while (cin.fail() || passw_input != haslo) {
-        if (cin.fail()) {
-            cin.clear();
-            cin.ignore(10000, '\n');
+    while (std::cin.fail() || passw_input != haslo) {
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
         }
 
         liczba_prob = liczba_prob + 1;
-        cout << "Podano niepoprawne haslo, sprobuj ponownie" << endl;
-        cout << "Podaj haslo: ";
-        cin >> passw_input;
+        std::cout << "Podano niepoprawne haslo, sprobuj ponownie" << std::endl;
+        std::cout << "Podaj haslo: ";
+        std::cin >> passw_input;
     }
 
-    cout << "Dostep przyznany." << endl;
-    cout << "Liczba wymaganych prob aby uzyskac dostep: " << liczba_prob << endl;
+    std::cout << "Dostep przyznany." << std::endl;
+    std::cout << "Liczba wymaganych prob aby uzyskac dostep: " << liczba_prob << std::endl;
 
     return 0;
 }

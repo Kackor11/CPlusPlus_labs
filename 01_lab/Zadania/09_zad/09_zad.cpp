@@ -1,24 +1,22 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main() {
-    string napis{};
+    std::string napis{};
 
-    cout << "Podaj dowolne slowo: " << endl;
-    cin >> napis;
+    std::cout << "Podaj dowolne slowo: " << std::endl;
+    std::cin >> napis;
 
-    while (cin.fail())
+    while (std::cin.fail())
     {
-        if (cin.fail())
+        if (std::cin.fail())
         {
-            cin.clear();
-            cin.ignore(10000, '\n');
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
         }
-        cout << "Wprowadzono niepoprawny napis, sprobuj ponownie" << endl;
-        cout << "Podaj dowolne slowo: " << endl;
-        cin >> napis;
+        std::cout << "Wprowadzono niepoprawny napis, sprobuj ponownie" << std::endl;
+        std::cout << "Podaj dowolne slowo: " << std::endl;
+        std::cin >> napis;
     }
 
     int rozmiar{};
@@ -36,10 +34,10 @@ int main() {
 
     if (points == rozmiar/2)
     {
-        cout << "Podane slowo " << napis << " jest palindromem" << endl;
+        std::cout << "Podane slowo " << napis << " jest palindromem" << std::endl;
     } else
     {
-        cout << "Podane slowo " << napis << " nie jest palindromem" << endl;
+        std::cout << "Podane slowo " << napis << " nie jest palindromem" << std::endl;
     }
     
     return 0;

@@ -1,28 +1,26 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main() {
-    string napis{};
-    string odwrocony_napis{};
+    std::string napis{};
+    std::string odwrocony_napis{};
 
-    cout << "Podaj dowolne slowo: ";
-    cin >> napis;
+    std::cout << "Podaj dowolne slowo: ";
+    std::cin >> napis;
 
     
     for (int i = 0; i < napis.length(); i++)
     {
         odwrocony_napis += napis[napis.length() - 1 - i];
-        cout << odwrocony_napis << endl;
+        std::cout << odwrocony_napis << std::endl;
     }
     
     if (odwrocony_napis == napis)
     {
-        cout << "Podany napis jest palindromem" << endl;
+        std::cout << "Podany napis jest palindromem" << std::endl;
     } else
     {
-        cout << "Podany napis nie jest palindromem" << endl;
+        std::cout << "Podany napis nie jest palindromem" << std::endl;
     }
 
     return 0;

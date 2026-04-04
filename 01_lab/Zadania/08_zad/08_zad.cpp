@@ -1,22 +1,20 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main() {
-    string word{};
+    std::string word{};
 
-    cout << "Podaj dowolne slow: ";
-    cin >> word;
+    std::cout << "Podaj dowolne slow: ";
+    std::cin >> word;
 
-    while (cin.fail() || word.length() == 0) {
-        if (cin.fail()) {
-            cin.clear();
-            cin.ignore(10000, '\n');
+    while (std::cin.fail() || word.length() == 0) {
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
         }
-        cout << "Wprowadzono bledne dane, sprobuj jeszcze raz" << endl;
-        cout << "Podaj dowolne slowo: ";
-        cin >> word;
+        std::cout << "Wprowadzono bledne dane, sprobuj jeszcze raz" << std::endl;
+        std::cout << "Podaj dowolne slowo: ";
+        std::cin >> word;
     }
 
     char first_char{};
@@ -25,8 +23,8 @@ int main() {
     first_char = word[0];
     last_char = word[word.length() - 1];
 
-    cout << "Pierwsza litera podanego slowa: " << first_char << endl;
-    cout << "Ostatnia litera podanego slowa: " << last_char << endl;
+    std::cout << "Pierwsza litera podanego slowa: " << first_char << std::endl;
+    std::cout << "Ostatnia litera podanego slowa: " << last_char << std::endl;
 
     return 0;
 }
