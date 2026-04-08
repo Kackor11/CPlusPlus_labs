@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <cmath>
+#include <cstdint>
 
 int is_armstrong_with_terminal_input() {
     int test_number{};
@@ -78,9 +79,9 @@ int check_if_armstrong(int test_number) {
     return 0;
 }
 
-int my_pow(int num, int size) {
+int64_t my_pow(int64_t num, int64_t size) {
     int state{1};
-    int res{num};
+    int64_t res{num};
 
     while (state < size)
     {
@@ -91,15 +92,15 @@ int my_pow(int num, int size) {
     return res;
 }
 
-int check_if_armstrong_v2(int given_number) {
-    int test_number = given_number;
+int check_if_armstrong_v2(int64_t given_number) {
+    int64_t test_number = given_number;
     if (test_number < 0)
     {
         return 0;
     }
 
     int size{0};
-    int test_number_copy{test_number};
+    int64_t test_number_copy{test_number};
 
     while (test_number_copy != 0)
     {
@@ -107,8 +108,8 @@ int check_if_armstrong_v2(int given_number) {
         size += 1;
     }
     
-    int res{0};
-    int curr{};
+    int64_t res{0};
+    int64_t curr{};
 
     while (test_number != 0)
     {
@@ -127,7 +128,7 @@ int main() {
 
     int check{};
     bool working{true};
-    int curr{0};
+    int64_t curr{0};
 
     while (working == true)
     {
@@ -138,10 +139,6 @@ int main() {
         }
 
         curr += 1;
-
-        if (curr > 100000000) {
-            working = false;
-        }
     }
     
 
