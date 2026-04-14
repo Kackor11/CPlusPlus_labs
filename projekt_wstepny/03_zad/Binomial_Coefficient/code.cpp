@@ -1,4 +1,7 @@
 #include <iostream>
+#include <chrono>
+
+using namespace std;
 
 int binomial(int n, int k) {
 
@@ -34,6 +37,37 @@ int binomial_recursive(int n, int k) {
     return binomial_rec_helper(n, k, 1, 1);
 }
 
+// PROGRAM Z WYKLADU:
 int main() {
-    return 0;
+    const int iteration_start = 30, iteration_end = 40;
+    const int k = 15;
+    const int repetitions = 1000000;
+    long long value1 = 0, value2 = 0;
+
+    auto function1 = binomial;
+    auto function2 = binomial_recursive;
+
+    for (int i = iteration_start; i < iteration_end; i++) {
+        // Pomiar Iteracyjny
+        auto begin = chrono::high_resolution_clock::now();
+        for(int r = 0; r < repetitions; r++) {
+            value1 = function1(i, k);
+        }
+        auto end = chrono::high_resolution_clock::now();
+        auto elapsed = chrono::duration_cast<chrono::duration<float>>(end - begin);
+
+        cout << "Iter(" << i << "," << k << ") = " << value1;
+        cout << " time (1mln calls): " << elapsed.count() << " s" << endl;
+
+        // Pomiar Rekurencyjny
+        begin = chrono::high_resolution_clock::now();
+        for(int r = 0; r < repetitions; r++) {
+            value2 = function2(i, k);
+        }
+        end = chrono::high_resolution_clock::now();
+        elapsed = chrono::duration_cast<chrono::duration<float>>(end - begin);
+
+        cout << " Rec(" << i << "," << k << ") = " << value2;
+        cout << " time (1mln calls): " << elapsed.count() << " s" << endl;
+    }
 }
