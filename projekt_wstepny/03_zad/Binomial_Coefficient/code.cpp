@@ -3,12 +3,12 @@
 
 using namespace std;
 
-int binomial(int n, int k) {
+long long binomial(int n, int k) {
 
     if (k == 0) return 1;
     if (n == 0 || k > n) return 0;
 
-    int res{1};
+    long long res{1};
 
     if (k > n - k) {k = n - k; }
 
@@ -21,15 +21,15 @@ int binomial(int n, int k) {
     return res;
 }
 
-int binomial_rec_helper(int n, int k, int curr, int acc) {
+long long binomial_rec_helper(int n, int k, int curr, long long acc) {
     if (curr > k) return acc;
 
-    int next_acc = acc * (n - curr + 1) / curr;
+    long long next_acc = acc * (n - curr + 1) / curr;
 
     return binomial_rec_helper(n, k, curr + 1, next_acc);
 }
 
-int binomial_recursive(int n, int k) {
+long long binomial_recursive(int n, int k) {
     if (k == 0) return 1;
     if (n == 0 || k > n) return 0;
     if (k > n - k) {k = n - k; }
